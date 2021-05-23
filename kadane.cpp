@@ -16,7 +16,7 @@ int main(){
     for(int i =0;i<n;i++) cin>>ar[i];
 
     int globalSum = ar[0],localSum = ar[0];
-    for(int i=0;i<n;i++){
+    for(int i=1;i<n;i++){
         localSum = max(ar[i],(ar[i]+localSum));
         if(localSum> globalSum) globalSum = localSum;
     }
